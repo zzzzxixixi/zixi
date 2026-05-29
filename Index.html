@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부경대 사회복지 실무역량 짱이야</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Pretendard', sans-serif;
+      background:#f7d9de;
+      color:#ff5f7a;
+      overflow-x:hidden;
+    }
+
+    header{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      background:
+      linear-gradient(
+        rgba(255,255,255,0.15),
+        rgba(255,255,255,0.15)
+      ),
+      #f7d9de;
+      position:relative;
+    }
+
+    .main-title{
+      font-size:8rem;
+      font-weight:900;
+      color:#ff6b81;
+      letter-spacing:5px;
+      line-height:1;
+      text-shadow:
+      0 0 15px rgba(255,255,255,0.7),
+      0 0 30px rgba(255,107,129,0.4);
+      animation:float 3s ease-in-out infinite;
+    }
+
+    .sub-title{
+      margin-top:25px;
+      font-size:1.3rem;
+      color:#ff7d94;
+      letter-spacing:4px;
+      font-weight:bold;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    .container{
+      width:90%;
+      max-width:1300px;
+      margin:auto;
+      padding-bottom:100px;
+    }
+
+    .section{
+      margin-bottom:80px;
+    }
+
+    .section-title{
+      font-size:2.5rem;
+      margin-bottom:30px;
+      color:#ff5f7a;
+      font-weight:900;
+      border-left:10px solid #ff7b93;
+      padding-left:20px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.45);
+      backdrop-filter:blur(12px);
+      border-radius:35px;
+      padding:35px;
+      box-shadow:
+      0 8px 25px rgba(255,107,129,0.15);
+      transition:0.35s;
+      border:3px solid rgba(255,255,255,0.5);
+    }
+
+    .card:hover{
+      transform:translateY(-10px) scale(1.02);
+      box-shadow:
+      0 12px 35px rgba(255,107,129,0.3);
+    }
+
+    .card h3{
+      font-size:1.8rem;
+      margin-bottom:20px;
+      color:#ff5f7a;
+    }
+
+    .card p{
+      line-height:1.9;
+      color:#ff7088;
+      font-size:1rem;
+    }
+
+    ul{
+      list-style:none;
+    }
+
+    li{
+      margin-bottom:15px;
+    }
+
+    a{
+      text-decoration:none;
+      color:#ff5f7a;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    a:hover{
+      color:white;
+    }
+
+    .weather-box{
+      background:#fff0f3;
+      border-radius:25px;
+      padding:20px;
+      margin-top:15px;
+    }
+
+    footer{
+      background:#ffb6c1;
+      text-align:center;
+      padding:40px 20px;
+      color:white;
+      font-weight:bold;
+      font-size:1rem;
+    }
+
+    .github-btn{
+      display:inline-block;
+      margin-top:15px;
+      padding:14px 28px;
+      background:white;
+      color:#ff6b81;
+      border-radius:999px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .github-btn:hover{
+      background:#ff6b81;
+      color:white;
+    }
+
+    .bubble{
+      position:absolute;
+      border-radius:50%;
+      background:rgba(255,255,255,0.35);
+      animation:bubble 10s infinite linear;
+    }
+
+    .bubble:nth-child(1){
+      width:120px;
+      height:120px;
+      top:10%;
+      left:10%;
+    }
+
+    .bubble:nth-child(2){
+      width:70px;
+      height:70px;
+      top:60%;
+      right:15%;
+    }
+
+    .bubble:nth-child(3){
+      width:90px;
+      height:90px;
+      bottom:10%;
+      left:20%;
+    }
+
+    @keyframes bubble{
+      0%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-20px);
+      }
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    @media(max-width:768px){
+
+      .main-title{
+        font-size:4rem;
+      }
+
+      .section-title{
+        font-size:2rem;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <h1 class="main-title">
+      오동통
+    </h1>
+
+    <p class="sub-title">
+      부경대 사회복지 실무역량 짱이야
+    </p>
+
+  </header>
+
+  <div class="container">
+
+    <!-- 날씨 -->
+    <section class="section">
+
+      <h2 class="section-title">
+        1. 부산 날씨
+      </h2>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <h3>오늘의 날씨</h3>
+
+          <div class="weather-box">
+
+            <p>
+              ☀ 부산 실시간 날씨 확인<br><br>
+              ✔ 기온 확인<br>
+              ✔ 강수 여부<br>
+              ✔ 미세먼지 정보<br>
+              ✔ 현장 활동 대비
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <h3>날씨 사이트</h3>
+
+          <ul>
+            <li>
+              <a href="https://weather.naver.com/" target="_blank">
+                네이버 날씨
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.weather.go.kr/" target="_blank">
+                기상청
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 부산 이슈 -->
+    <section class="section">
+
+      <h2 class="section-title">
+        2. 부산의 이슈
+      </h2>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <h3>부산 뉴스</h3>
+
+          <ul>
+
+            <li>
+              <a href="https://www.busan.com/" target="_blank">
+                부산일보
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.kookje.co.kr/" target="_blank">
+                국제신문
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.busan.go.kr/" target="_blank">
+                부산광역시
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <h3>사회 이슈</h3>
+
+          <p>
+            · 고령화 문제<br>
+            · 청년 취업 문제<br>
+            · 지역 돌봄 정책<br>
+            · 사회복지 서비스 확대<br>
+            · 지역사회 복지 강화
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 부경대 뉴스 -->
+    <section class="section">
+
+      <h2 class="section-title">
+        3. 부경대 관련 뉴스
+      </h2>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <h3>부경대학교</h3>
+
+          <ul>
+
+            <li>
+              <a href="https://www.pknu.ac.kr/main" target="_blank">
+                부경대학교 홈페이지
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.pknu.ac.kr/main/163" target="_blank">
+                공지사항
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.pknu.ac.kr/main/164" target="_blank">
+                대학 뉴스
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <h3>사회복지 활동</h3>
+
+          <p>
+            ✔ 현장실습<br>
+            ✔ 복지 프로그램<br>
+            ✔ 지역사회 활동<br>
+            ✔ 사회복지 연구<br>
+            ✔ 봉사활동 정보
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 사회복지 통계 -->
+    <section class="section">
+
+      <h2 class="section-title">
+        4. 사회복지 관련 통계
+      </h2>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <h3>통계 사이트</h3>
+
+          <ul>
+
+            <li>
+              <a href="https://kosis.kr/" target="_blank">
+                국가통계포털 KOSIS
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.index.go.kr/" target="_blank">
+                e-나라지표
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.mohw.go.kr/" target="_blank">
+                보건복지부
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="card">
+
+          <h3>통계 분야</h3>
+
+          <p>
+            · 노인복지<br>
+            · 장애인복지<br>
+            · 아동복지<br>
+            · 복지예산<br>
+            · 지역사회 복지지표
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer>
+
+    © 2026 부경대 사회복지 실무역량 짱이야
+
+    <br>
+
+    <a
+      class="github-btn"
+      href="https://github.com/zzzzxixixi"
+      target="_blank">
+
+      Github 바로가기
+
+    </a>
+
+  </footer>
+
+</body>
+</html>
